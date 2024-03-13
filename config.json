@@ -1,0 +1,97 @@
+{
+    "bridge": {
+        "name": "Homebridge MLC",
+        "username": "0E:02:19:32:D0:6C",
+        "port": 51528,
+        "pin": "724-64-902",
+        "advertiser": "bonjour-hap"
+    },
+    "accessories": [
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "WiFi Plug",
+            "switchType": "stateful",
+            "onUrl": "http://10.0.0.78/on",
+            "offUrl": "http://10.0.0.78/off",
+            "statusUrl": "http://10.0.0.78/state"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "TV Power",
+            "switchType": "stateless",
+            "timeout": 50,
+            "onUrl": "http://10.0.0.80/ir?code=12419199"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "TV Input",
+            "switchType": "stateless",
+            "timeout": 50,
+            "onUrl": "http://10.0.0.80/ir?code=12390639"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "TV Mute",
+            "switchType": "stateless",
+            "timeout": 50,
+            "onUrl": "http://10.0.0.80/ir?code=12394719"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "Xbox Power",
+            "switchType": "stateless",
+            "timeout": 50,
+            "onUrl": "http://10.0.0.80/ir?code=18556633"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "Sleep",
+            "switchType": "stateless",
+            "timeout": 50,
+            "onUrl": "http://10.0.0.80/ir?code=12437559"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "PowerBox 1",
+            "switchType": "stateful",
+            "onUrl": "http://10.0.0.76/p1-on",
+            "offUrl": "http://10.0.0.76/p1-off",
+            "statusUrl": "http://10.0.0.76/state-1"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "PowerBox 2",
+            "switchType": "stateful",
+            "onUrl": "http://10.0.0.76/p2-on",
+            "offUrl": "http://10.0.0.76/p2-off",
+            "statusUrl": "http://10.0.0.76/state-2"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "PowerBox 3",
+            "switchType": "stateful",
+            "onUrl": "http://10.0.0.76/p3-on",
+            "offUrl": "http://10.0.0.76/p3-off",
+            "statusUrl": "http://10.0.0.76/state-3"
+        },
+        {
+            "accessory": "HTTP-SWITCH",
+            "name": "PowerBox 4",
+            "switchType": "stateful",
+            "onUrl": "http://10.0.0.76/p4-on",
+            "offUrl": "http://10.0.0.76/p4-off",
+            "statusUrl": "http://10.0.0.76/state-4"
+        }
+    ],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 8581,
+            "auth": "none",
+            "theme": "dark-mode",
+            "tempUnits": "c",
+            "lang": "auto",
+            "platform": "config"
+        }
+    ]
+}
