@@ -1,6 +1,15 @@
 #!/bin/bash
 
 
+
+echo "Time & date"
+sleep 2s
+apt install chrony -y
+service chrony restart
+date
+sleep 3s
+clear
+
 echo "updating sistem"
 sleep 2s
 apt update -y && apt upgrade -y
