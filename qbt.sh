@@ -31,7 +31,7 @@ read_exit_status=$?
 if [ $read_exit_status != 0 ]; then
 clear
 echo "next install"
-./servers.sh | bash
+./servers.sh
 else
 echo "Back to CLI"
 fi

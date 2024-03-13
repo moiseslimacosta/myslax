@@ -29,6 +29,11 @@ fi
 systemctl start JMusicBot
 systemctl enable JMusicBot
 
+clear
+
+echo "cleaning..."
+cd ~
+rm -r install
 
 echo "Next install in 5 seconds."
 echo "Press Enter to CLI"

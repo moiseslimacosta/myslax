@@ -44,7 +44,7 @@ read_exit_status=$?
 if [ $read_exit_status != 0 ]; then
 clear
 echo "next install"
-./qbt.sh | bash
+./qbt.sh
 else
 echo "Back to CLI"
 fi'

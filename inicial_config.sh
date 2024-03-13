@@ -58,6 +58,12 @@ systemctl disable xorg
 clear
 
 
+echo "installing wget"
+sleep 2s
+apt install wget -y
+clear
+
+
 echo "installing curl"
 sleep 2s
 apt install curl -y
