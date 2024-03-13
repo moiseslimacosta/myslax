@@ -24,16 +24,14 @@ systemctl enable qbittorrent.service
 
 clear
 
-echo "Back to CLI in 10 seconds."
-echo "Press Enter to Next install."
-read -t 10 
+echo "Next install in 5 seconds."
+echo "Press Enter to CLI"
+read -t 5 
 read_exit_status=$?
-if [ $read_exit_status = 0 ]; then
+if [ $read_exit_status != 0 ]; then
 clear
 echo "next install"
-curl -sSL https://raw.githubusercontent.com/moiseslimacosta/myslax/main/servers.sh | bash
+./servers.sh | bash
 else
-echo "Timeout"
+echo "Back to CLI"
 fi
-echo 'next install'
-echo 'curl -sSL https://raw.githubusercontent.com/moiseslimacosta/myslax/main/servers.sh | bash'

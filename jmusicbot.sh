@@ -1,25 +1,27 @@
 #!/bin/bash
 
 
-wget https://raw.githubusercontent.com/moiseslimacosta/myslax/main/JMusicBot.service
+wget https://raw.githubusercontent.com/moiseslimacosta/myslax/main/jmusicbot/JMusicBot.service
 mv JMusicBot.service /etc/systemd/system/
-# wget https://raw.githubusercontent.com/moiseslimacosta/myslax/main/config.txt
-# mv config.txt /home/moises/jmusicbot
+wget https://raw.githubusercontent.com/moiseslimacosta/myslax/main/config.txt
+mv config.txt /home/moises/jmusicbot
 mkdir /home/moises/jmusicbot/Playlist
+wget https://raw.githubusercontent.com/moiseslimacosta/myslax/main/jmusicbot/input.sh
+./input.sh | bash
 wget https://github.com/jagrosh/MusicBot/releases/download/0.4.0/JMusicBot-0.4.0.jar
 mv JMusicBot-0.4.0.jar /home/moises/jmusicbot/jmusicbot.jar
 systemctl start JMusicBot
 systemctl enable JMusicBot
 
 
-echo "Program will terminate 10 seconds."
-echo "Press Enter to reboot."
-read -t 10 
+echo "Next install in 5 seconds."
+echo "Press Enter to CLI"
+read -t 5 
 read_exit_status=$?
-
-if [ $read_exit_status = 0 ]; then
-echo "Rebooting now"
-reboot
+if [ $read_exit_status != 0 ]; then
+clear
+echo "Rebooting"
+./jmusicbot.sh | bash
 else
-echo "Timeout"
+echo "Back to CLI"
 fi

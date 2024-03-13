@@ -105,14 +105,14 @@ sleep 2s
 clear
 
 
-echo "Back to CLI in 10 seconds."
-echo "Press Enter to reboot."
-read -t 10 
+echo "Rebooting in 5 seconds."
+echo "Press Enter to Back to CLI."
+read -t 5 
 read_exit_status=$?
-if [ $read_exit_status = 0 ]; then
+if [ $read_exit_status != 0 ]; then
 clear
-echo "next install"
-sudo reboot now
+echo "Rebooting"
+reboot
 else
 echo "Timeout"
 fi
