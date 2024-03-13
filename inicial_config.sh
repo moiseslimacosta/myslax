@@ -7,7 +7,7 @@ apt update -y && apt upgrade -y
 clear
 
 
-echo "installing apt repository"
+echo "installing apt lib"
 sleep 2s
 sudo apt install python3-launchpadlib -y
 clear
