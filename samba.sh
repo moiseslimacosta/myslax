@@ -34,7 +34,6 @@ smbpasswd -a moises
 echo "service Restarting"
 sleep 3s
 /etc/init.d/samba-ad-dc restart
-
 clear
 
 echo "Next install in 5 seconds."
@@ -47,4 +46,4 @@ echo "next install"
 ./qbt.sh
 else
 echo "Back to CLI"
-fi'
+fi

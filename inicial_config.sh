@@ -2,8 +2,9 @@
 
 
 
-echo "Time & date"
+echo "Time & Date"
 sleep 2s
+timedatectl set-timezone America/Sao_Paulo
 apt install chrony -y
 service chrony restart
 date
