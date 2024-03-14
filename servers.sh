@@ -7,13 +7,6 @@ curl -sSL https://install.pi-hole.net | bash
 clear
 
 
-echo "installing Linux-Dash"
-sleep 3s
-git clone --depth 1 https://github.com/afaqurk/linux-dash.git
-mv linux-dash /var/www/html/
-clear
-
-
 echo "installing HomeBridge"
 sleep 3s
 curl -sSfL https://repo.homebridge.io/KEY.gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/homebridge.gpg  > /dev/null
@@ -22,8 +15,14 @@ sudo apt-get update -y
 sudo apt-get install homebridge -y
 sudo wget https://raw.githubusercontent.com/moiseslimacosta/myslax/main/homebridge/config.json
 sudo mv config.json /var/lib/homebridge/
-
 clear
+
+echo "installing Linux-Dash"
+sleep 3s
+git clone --depth 1 https://github.com/afaqurk/linux-dash.git
+mv linux-dash /var/www/html/
+clear
+
 
 echo "Next install in 5 seconds."
 echo "Press Enter to CLI"
